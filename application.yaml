@@ -4,9 +4,9 @@ server:
      namespace: argocd
      project: default
      source:
-       repoURL: https://github.com/Los-Externalistas/Principal
+       repoURL: https://github.com/Los-Externalistas/ArgoCD
        targetRevision: HEAD
-       path: argocd/manifests/cluster
+       path: manifests/cluster
        directory:
          recurse: true
      destination:
