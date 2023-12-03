@@ -11,7 +11,7 @@ spec:
     targetRevision: 25.0.0
     helm:
       releaseName: traefik
-      version: v3.9.0
+      version: v3
   destination:
     server: "https://kubernetes.default.svc"
     namespace: traefik
