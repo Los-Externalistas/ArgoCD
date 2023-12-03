@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sealed-secrets
+  name: traefik
   namespace: argocd
 spec:
   project: default
   source:
-    chart: sealed-secrets
+    chart: traefik
     repoURL: https://traefik.github.io/charts
-    targetRevision: 1.16.1
+    targetRevision: 25.0.0
     helm:
-      releaseName: sealed-secrets
+      releaseName: traefik
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: kubeseal
+    namespace: traefik
