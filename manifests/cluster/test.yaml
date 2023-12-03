@@ -14,7 +14,7 @@ spec:
     - protocol: TCP
       name: websecure
       port: 4443
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: traefik
 ---
