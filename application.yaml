@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: manifests/cluster
-    repoURL: "https://github.com/Los-Externalistas/ArgoCD"
+    repoURL: "https://github.com/Los-Externalistas/ArgoCD/"
     targetRevision: main
   syncPolicy:
     syncOptions:
