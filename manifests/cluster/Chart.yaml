@@ -1,4 +1,0 @@
-dependencies:
-  - name: "mflow-server"
-    version: "0.5.7"
-    repository: "artifacthub.io/packages/helm/traefik/traefik"
