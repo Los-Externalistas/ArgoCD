@@ -5,7 +5,7 @@ server:
      project: default
      source:
        repoURL: https://github.com/Los-Externalistas/ArgoCD
-       targetRevision: HEAD
+       targetRevision: main
        path: manifests/cluster
        directory:
          recurse: true
