@@ -1,17 +1,17 @@
-server:
-  additionalApplications:
-   - name: cluster-config
-     namespace: argocd
-     project: default
-     source:
-       repoURL: https://github.com/Los-Externalistas/ArgoCD
-       targetRevision: main
-       path: manifests/cluster
-       directory:
-         recurse: true
-     destination:
-       server: https://kubernetes.default.svc
-     syncPolicy:
-       automated:
-         prune: false
-         selfHeal: false
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-config
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: manifests/cluster
+    repoURL: "https://github.com/Los-Externalistas/ArgoCD"
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
